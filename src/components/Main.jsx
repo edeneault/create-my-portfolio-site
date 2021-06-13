@@ -14,124 +14,247 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
 	main           : {
-		padding      : theme.spacing(8, 0, 6),
-		marginBottom : theme.spacing(8)
+		padding      : theme.spacing(4, 0, 2),
+        marginBottom: theme.spacing(4),
+        marginRight: theme.spacing(2),
+        marginLeft: theme.spacing(2),
+        color: "rgba(0,0,0,0.75)"
 	},
 	cardsTitle     : {
-		paddingBottom : theme.spacing(6)
+        paddingBottom: theme.spacing(6),
+        color: "rgba(255,255,255,1)"
 	},
 	cardGrid       : {
-		paddingTop    : theme.spacing(8),
+		paddingTop    : theme.spacing(2),
 		paddingBottom : theme.spacing(8)
 	},
 	card           : {
 		height        : '100%',
 		display       : 'flex',
-		flexDirection : 'column'
+        flexDirection: 'column',
+        backgroundColor: "rgba(255,255,255,0.75)"
 	},
 	cardMedia      : {
 		paddingTop : '56.25%'
 	},
 	cardContent    : {
-		flexGrow : 1
+        flexGrow: 1,
+        color: "rgba(0,0,0,0.75)"
 	},
-	profilePicture : {
-		float       : 'right',
-		marginRight : '2rem'
+    profilePicture: {
+        padding: theme.spacing(2), 
+		float       : 'left',
+        marginLeft: '2rem'
 	},
-	mainBlurb      : {
-		paddingBottom : theme.spacing(2)
-	}
+    mainBlurb: {
+        padding: theme.spacing(2), 
+        paddingBottom: theme.spacing(1),
+        color: "rgba(0,0,0,0.75)",
+        borderRadius: "4px",
+        minHeight: '5rem'
+    },
+    card2: {
+        backgroundColor: "rgba(255,255,255,0.75)"
+    },
+    divider: {
+        marginBottom: theme.spacing(2)
+    },
+    links: {
+        marginTop: theme.spacing(1)
+    },
+    topCardTitle: {
+        fontSize: '2rem',
+        display: 'block'
+    }
+   
 }));
+
+
 const Main = () => {
 	const classes = useStyles();
-	const { main, work } = useContext(MyInfoContext);
+    const { main, work } = useContext(MyInfoContext);
+    
 	return (
 		<React.Fragment>
 			{/** Main unit */}
-			<div className={classes.main}>
-				<Container maxWidth='md'>
-					<div className={classes.profilePicture}>
-						<img
-							width='300px'
-							src={main.profileImage.url || genericUser}
-							alt={main.profileImage.altText}
-						/>
-					</div>
-					<Typography
-						component='h1'
-						variant='h2'
-						align='left'
-						color='textPrimary'
-						gutterBottom
-					>
-						{main.greeting}
-					</Typography>
-				</Container>
+            <div className={classes.main}>
+                
+                
+                <Grid container spacing={4}
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+
+                >
+                    <Grid item xs={12} sm={12} md={10} lg={10} >
+                        <Card className={classes.card2}>
+                            <Grid item xs={12} sm={12} lg={2} >
+                                <div className={classes.profilePicture}>
+                                    <img
+                                    height={'160px'}
+                                        src={main.profileImage.url || genericUser}
+                                        alt={main.profileImage.altText}
+                                    />
+                                </div>
+                            </Grid>
+
+                            <Grid item sm={12} md={12} lg={10}>
+                                <div>
+                                    <Typography
+                                        className={classes.mainBlurb}
+                                        variant='body1'
+                                        align='left'                                    
+                                        gutterBottom
+                                    >
+                                        <Typography
+                                            className={classes.topCardTitle}
+                                            component='span'
+                                            variant='body1'
+                                            align='left'
+                                            gutterBottom 
+                                        >
+                                            {main.greeting}
+                                        </Typography>
+                                        
+                                        {main.blurb}
+                                    </Typography>
+                                </div>
+                            </Grid>
+                        </Card>
+                    </Grid>
+				</Grid>
+				
 			</div>
 
-			{/** End Main unit */}
-			{/** Secondary unit */}
-			<Container maxWidth='md'>
-				<Typography
-					className={classes.mainBlurb}
-					variant='subtitle1'
-					align='center'
-					color='textSecondary'
-					gutterBottom
-				>
-					{main.blurb}
-				</Typography>
-
-				<Divider />
-			</Container>
-
-			{/** End Secondary unit */}
+            {/** End Main unit */}
+            {/* < Divider /> */}
 			{/** Cards unit */}
 
-			<Container maxWidth='md' className={classes.cardGrid}>
+			<Container maxWidth='lg' className={classes.cardGrid}>
 				<div className={classes.cardsTitle}>
 					<Typography
 						variant='h5'
-						component='h3'
+						component='h4'
 						align='center'
-						color='textSecondary'
-						gutterBottom
+                        gutterBottom
+                        color='textPrimary'
 					>
 						{work.categoryName}
 					</Typography>
 				</div>
 				<Grid container spacing={4}>
 					{work.projects.map((w) => (
-						<Grid item key={w.projectName} xs={12} sm={6} md={4}>
+						<Grid item key={w.projectName} xs={12} sm={6} md={4} lg={3}>
 							<Card className={classes.card}>
 								<CardMedia
 									className={classes.cardMedia}
 									image={w.image.url}
 									title={w.image.altText}
-								/>
-								<CardContent className={classes.cardContent}>
-									<Typography gutterBottom variant='h5' component='h2'>
-										{w.projectName}
-									</Typography>
+                                />
 
-									<Typography variant='body2'>{w.description}</Typography>
-								</CardContent>
-								<CardActions>
+                                <Divider />
+
+								<CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant='h5'
+                                        component='h5'
+                                        align='center'
+                                    >
+										{w.projectName}
+                                    </Typography>
+                                    <Divider className={classes.divider} />
+
+                                    <Typography variant='body2'>{w.description}</Typography>
+                                </CardContent>
+                                
+                                <CardActions>
+                               
 									<Button
 										size='small'
-										color='primary'
+										color='secondary'
 										onClick={() => window.open(w.url)}
+                                    >
+                                        { w.projectName === "Smart Garden" ? work.buttonName3 : work.buttonName }
+                                    </Button>
+                                    <Button
+										size='small'
+										color='secondary'
+										onClick={() => window.open(w.links.link2)}
 									>
-										{work.buttonName}
-									</Button>
+										{work.buttonName2}
+                                    </Button>
+                                    
 								</CardActions>
 							</Card>
 						</Grid>
 					))}
 				</Grid>
 			</Container>
-			{/** End Cards unit */}
+            
+            
+            <Container maxWidth='lg' className={classes.cardGrid}>
+				<div className={classes.cardsTitle}>
+					<Typography
+						variant='h5'
+						component='h4'
+						align='center'
+                        gutterBottom
+                        color='textPrimary'
+					>
+						{work.categoryName2}
+					</Typography>
+				</div>
+                <Grid container spacing={4}
+
+                    justify="center"
+
+                >
+					{work.addProjects.map((w) => (
+						<Grid item key={w.projectName} xs={6} sm={6} md={4} lg={3}>
+							<Card className={classes.card}>
+								<CardMedia
+									className={classes.cardMedia}
+									image={w.image.url}
+									title={w.image.altText}
+                                />
+
+                                <Divider />
+
+								<CardContent className={classes.cardContent}>
+                                    <Typography gutterBottom variant='h5'
+                                        component='h5'
+                                        align='center'
+                                    >
+										{w.projectName}
+                                    </Typography>
+                                    <Divider className={classes.divider} />
+
+                                    <Typography variant='body2'>{w.description}</Typography>
+                                </CardContent>
+                                
+                                <CardActions>
+                               
+									<Button
+										size='small'
+										color='secondary'
+										onClick={() => window.open(w.url)}
+                                    >
+                                        { w.projectName === "Smart Garden" ? work.buttonName3 : work.buttonName }
+                                    </Button>
+                                    <Button
+										size='small'
+										color='secondary'
+										onClick={() => window.open(w.links.link2)}
+									>
+										{work.buttonName2}
+                                    </Button>
+                                    
+								</CardActions>
+							</Card>
+						</Grid>
+					))}
+				</Grid>
+            </Container>
+            {/** End Cards unit */}
 		</React.Fragment>
 	);
 };

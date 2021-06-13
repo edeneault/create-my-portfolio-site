@@ -1,6 +1,8 @@
 {
     "navigation": {
         "name": "Etienne Deneault",
+        "description": "React Portifolio built using a template designed by Brian Tran, friend/fellow software engineer. I used the project template to test the workflow and provide feedback.  I also made significant modifications to suit my needs. ( e.g. this modal!)",
+        "templateUrl": " (https://github.com/brian-trann/portfolio-site)",
         "menu": [
             {
                 "text": "Home",
@@ -14,21 +16,21 @@
             },
             {
                 "text": "Github",
-                "url": "https://github.com/",
+                "url": "https://github.com/edeneault/",
                 "target":"_blank"
             },
             {
                 "text": "LinkedIn",
-                "url": "https://www.linkedin.com//",
+                "url": "https://www.linkedin.com/in/etiennedeneault/",
                 "target":"_blank"
             }
         ]
     },
     "main": {
-        "greeting": "Hi, I'm Etienne Deneault a Software Developer from Canada",
-        "blurb":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque.",
+        "greeting": "Software Engineer",
+        "blurb":"I am a Software Engineer with experience in building web applications and providing product-based solutions that are well-planned and deliver performant applications for all of the stakeholders. I thrive when working in teams that are motivated and are passionate about delivering the best possible products.  I strive to be a lifelong student and teacher.",
         "profileImage": { 
-            "url":"",
+            "url":"https://res.cloudinary.com/gym-hero/image/upload/r_30/r_0/a_0/v1620777477/myProfile-images/Etienne-Deneault-Headshot_g0gikz.png",
             "altText":"profile image"
         },
         "image": {
@@ -37,97 +39,185 @@
         }
     },
     "work":{
-        "categoryName":"Selected Work",
+        "categoryName":"WORK | PROJECT | DEMO",
+        "categoryName2":"Additional Games",
         "projects":[
             {
-                "projectName": "project0",
-                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque.",
-                "url":"https://github.com/",
+                "projectName": "Gym Hero",
+                "description":"Designed as Capstone project for the SpringBoard Software Engineering Bootcamp, GYM HERO is a lightweight Athlete Management Web Application.",
+                "url":"https://sb-gym-hero.herokuapp.com/",
                 "image": {
-                    "url": "https://github.githubassets.com/images/modules/site/home/repo-browser.png",
+                    "url": "https://res.cloudinary.com/gym-hero/image/upload/v1620791353/screenshots-promotional/user-view-screenshot_fvn0yl.png",
                     "altText": "project0 thumbnail"
+                },
+                "links": {
+                    "link1": "",
+                    "link2": "https://github.com/edeneault/SpringBoard-Capstone-1"
                 }
             },
             {
-                "projectName": "project1",
-                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque.",
-                "url":"https://github.com/",
+                "projectName": "Connect4",
+                "description":"Web Game built using dynamic javascript.  Programmed in OOP.  Features include: Computer Player for solo play, local storage to persist scoreboard values, color picker for player tokens.",
+                "url":"https://edeneault.github.io/Connect4_OO_Version/",
                 "image": {
-                    "url": "https://github.githubassets.com/images/modules/site/home/repo-browser.png",
+                    "url": "https://res.cloudinary.com/gym-hero/image/upload/v1620792800/screenshots-promotional/Connect4_Render_2_2_vkablp.png",
                     "altText": "project1 thumbnail"
+                },
+                "links": {
+                    "link1": "",
+                    "link2": "https://github.com/edeneault/Connect4_OO_Version"
                 }
             },
             {
-                "projectName": "project2",
-                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque.",
-                "url":"https://github.com/",
+                "projectName": "Currency Converter",
+                "description":"Foreign Currency Converter is a Flask-jinja template driven application providing currency conversion features.  Features include currency conversion, historical currency variation data with a javascript build graphical representation and estimated conversion rates with fees.",
+                "url":"https://fc-converter.herokuapp.com/",
                 "image": {
-                    "url": "https://github.githubassets.com/images/modules/site/home/repo-browser.png",
+                    "url": "https://res.cloudinary.com/gym-hero/image/upload/v1623533826/myProfile-images/FC-screeshot_h9ojsg.jpg",
                     "altText": "project2 thumbnail"
+                },
+                "links": {
+                    "link1": "",
+                    "link2": "https://github.com/edeneault/Forex-Currency-Converter"
+                }
+            },
+            {
+                "projectName": "Smart Garden",
+                "description":"\"A BBQ transformation into a planter box, remixed with a Raspberry Pi based environmental monitoring and plant watering system.\"",
+                "url":"https://magpi.raspberrypi.org/articles/smart-garden",
+                "image": {
+                    "url": "https://res.cloudinary.com/gym-hero/image/upload/v1623539855/myProfile-images/smart_garden_bbq_conversion-4150c89c_fgatjr.jpg",
+                    "altText": "project2 thumbnail"
+                },
+                "links": {
+                    "link1": "https://magpi.raspberrypi.org/articles/smart-garden",
+                    "link2": "https://github.com/edeneault/Weber-BBQ-Conversion-Smart-Garden"
                 }
             }
         ],
-        "buttonName":"Go"
+        "addProjects":[
+            {
+                "projectName": "Marvel Memory",
+                "description":"Marvel themed memory game using dynamic vanila javascript.",
+                "url":"https://edeneault.github.io/Marvel-Memory-Game/",
+                "image": {
+                    "url": "https://res.cloudinary.com/gym-hero/image/upload/v1623565927/myProfile-images/marvel-logo_yn6tm5.png",
+                    "altText": "MArvel Memory"
+                },
+                "links": {
+                    "link1": "",
+                    "link2": "https://github.com/edeneault/Forex-Currency-Converter"
+                }
+            },
+            {
+                "projectName": "Jeapordy Trivia",
+                "description":"Jeopardy trivia game using javascript to dynamically generate html. Game uses API jService for question data.",
+                "url":"https://edeneault.github.io/jeopardy-assessment-2/",
+                "image": {
+                    "url": "https://res.cloudinary.com/gym-hero/image/upload/v1623588932/myProfile-images/empty_set_unbqxg.jpg",
+                    "altText": "Jeoparday Trivia"
+                },
+                "links": {
+                    "link1": "",
+                    "link2": "https://github.com/edeneault/Forex-Currency-Converter"
+                }
+            }
+        ],
+        "buttonName":"LIVE",
+        "buttonName2":"GITHUB",
+        "buttonName3": "MAG PI"
+        
     },
     "about": {
-        "categoryName":"About",
-        "statement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque.",
+        "categoryName":"ABOUT",
+        "statement1": "I am a Software Engineer with experience in building web applications and providing product-based solutions that are well-planned and deliver performant applications for all of the stakeholders. I thrive when working in teams that are motivated and are passionate about delivering the best possible product.",
+        "statement2": "Over the last 10 years, I have had success in implementing solutions that provide meaningful data to high performance environments such as Cirque du Soleil. I was part of a team that supported the integration of an athlete/artist management system and helped to develop a platform consisting of a dashboard with relevant medical/performance data.",
+        "statement3": "I am interested in a position within a progressive company in the tech industry that is dynamic, multi-cultural and stimulating. I bring a positive attitude and the ability to take complex problems and design thoughtful solutions.",
         "skills":{
-            "categoryName":"Skills",
+            "categoryName":"SKILLS",
             "items":[
                 {
                     "type":"Languages",
                     "items":["JavaScript", "HTML", "CSS","Python","SQL"]
                 },
                 {
-                    "type":"Libraries and Frameworks",
-                    "items":["React", "Redux", "Express","Flask"]
+                    "type":" Front-End",
+                    "items":["React", "Bootstrap 4-5", "Materialize", "Foundation by Zurb"]
                 },
                 {
-                    "type":"Other",
-                    "items":["other0", "other1"]
+                    "type":"Back-end",
+                    "items":["Express.js", "Flask"]
+                },
+                {
+                    "type":"Relational Database",
+                    "items":["PostgreSQL", "mySQL", "SQLite"]
+                },
+                {
+                    "type":"Additional Tools",
+                    "items":["PostgreSQL", "mySQL", "SQLite"]
                 }
             ]
         },
         "workExperience": {
-            "categoryName":"Work Experience",
+            "categoryName":"EXPERIENCE",
             "work": [
                 {
-                    "company":"company0",
-                    "position":"position0",
-                    "date":"Date 2020 - Date 2021",
-                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque."
+                    "company":"CIRQUE DU SOLEIL",
+                    "position":"Lead Manager - Head Coach of Acrobatics",
+                    "date":"2011 – 2020",
+                    "description":"Successfully led teams of 65+ employees in daily operations. Subject matter expert in the development of a dashboard to analyze and view aggregate performance data of athletes and deployed a customized athlete management system. Implemented development programs to secure a pipeline of qualified future coaches."
                 },
                 {
-                    "company":"company2",
-                    "position":"position1",
-                    "date":"Date 2019 - Date 2020",
-                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque."
+                    "company":"IMAGO ENTERTAINMENT",
+                    "position":"Director of Operations",
+                    "date":"2002 – 2011",
+                    "description":"Directed day to day operations, participated in the production design workflow and led project teams. IMAGO focused on  providing sophisticated acrobatic acts, full- length productions and development, technical services, production staffing and event logistics. Participated in over 500 events and tours with Imago."
                 }
             ]
         },
         "education":{
-            "categoryName":"Education",
+            "categoryName":"EDUCATION",
             "items": [
                 {
-                    "name":"education0",
-                    "curriculum":"curriculum0",
-                    "date":"Date 2020 - Date 2021",
-                    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien tortor, ornare nec leo nec, convallis pulvinar tortor. Ut lorem sem, tempus eu cursus eu, pulvinar sit amet neque."
+                    "name":"SPRINGBOARD",
+                    "curriculum":"Software Engineering",
+                    "date":"2020 – 2021",
+                    "description":"700+ hours of hands-on course material, with 1:1 industry expert mentor oversight, and completion of 4 in-depth portfolio projects. Mastered skills in front-endweb development, back-end web development, databases, and data structures and algorithms."
                 }
             ]
         },
         "certifications":{
-            "categoryName":"Certifications",
-            "items":["certification0", "certification1"]
+            "categoryName":"CERTIFICATIONS",
+            "items":[
+                {
+                    "name": "Python Specialization with Honnors (5 courses)",
+                    "organization": "University of Michigan (coursera)"
+                },
+                {
+                    "name": "Web Application Specialization (5 courses)",
+                    "organization": "University of Michigan (coursera)"
+                },
+                {
+                    "name": "JavaScript, jQuery, and JSON",
+                    "organization": "University of Michigan (coursera)"
+                },
+                {
+                    "name": "Front-End Web UI Frameworks and Tools: Bootstrap 4 with Honors",
+                    "organization": "University of HK  (coursera)"
+                },
+                {
+                    "name": "Introduction to Structured Query Language SQL",
+                    "organization": "University of Michigan (coursera)"
+                }
+            ]
         }
     },
     "other":{
         "images":[
             {"image":{
-                "url":"https://github.githubassets.com/images/modules/site/home/repo-browser.png",
+                "url":"https://res.cloudinary.com/gym-hero/image/upload/v1623603978/myProfile-images/Master-header-2_vjznzc.png",
                 "altText":"",
-                "description":""
+                "description":"\"Software Engineers can help shape positive results in the real world\""
                 }
             }
         ]

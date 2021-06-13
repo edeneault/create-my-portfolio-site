@@ -5,25 +5,36 @@ import Typography from '@material-ui/core/Typography';
 import MyInfoContext from '../context/MyInfoContext';
 import { makeStyles } from '@material-ui/core/styles';
 import MyNavButton from './MyNavButton';
+
+
+
+
 const useStyles = makeStyles(() => ({
 	root       : {
-		flexGrow : 1
+        flexGrow: 1
 	},
 	title      : {
 		flexGrow    : 2,
-		paddingLeft : '2rem'
+        paddingLeft: '2rem'
+           
 	},
 	navButtons : {
-		paddingRight : '2rem'
-	}
+        paddingRight: '2rem'
+    },
+    navBar: {
+        backgroundColor: 'rgba(0,0,0,0.75)',
+    }
+    
 }));
 
 const NavBar = () => {
 	const { navigation: { menu, name } } = useContext(MyInfoContext);
-	const classes = useStyles();
+    const classes = useStyles();
+    console.log(classes);
 	return (
-		<AppBar position='static'>
-			<Toolbar>
+        <AppBar position='static' className={classes.navBar}>
+            
+			<Toolbar >
 				<Typography variant='h6' className={classes.title}>
 					{name}
 				</Typography>
