@@ -154,7 +154,7 @@
                 },
                 {
                     "type":"Additional Tools",
-                    "items":["PostgreSQL", "mySQL", "SQLite"]
+                    "items":["git", "Node.js", "bash", "jasmine", "jest", "VSCode", "Photoshop", "Premiere Pro", "Illustrator", "inDesign"]
                 }
             ]
         },

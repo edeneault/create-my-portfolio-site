@@ -7,7 +7,6 @@ import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import CardMedia from '@material-ui/core/CardMedia';
 import Card from '@material-ui/core/Card';
-// import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
